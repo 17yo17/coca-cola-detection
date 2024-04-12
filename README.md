@@ -28,7 +28,7 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
   </p>
 </div>
   
-## <div align="center" Training Procedure Visualization></div>
+## <div align="center"> Training Procedure Visualization</div>
 
 <div align="center">
   <p>
