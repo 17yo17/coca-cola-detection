@@ -14,12 +14,12 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
 | [YOLOv8x](https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8x.pt) | 640                   | 53.9                 | 479.1                          | 3.53                                | 68.2               | 257.8             |
 
 
-## <div align="center" Try my Coca-Cola Model></div>
+## <div align="center"> Try my Coca-Cola Model</div>
 
 <div algin="center">
-  <p>
+  <a>
     <img src="img/coca-cola-model.png" alt="Coca-Cola Model">
-  </p>
+  </a>
 </div>
   
 ## <div align="center" Training Procedure Visualization></div>
