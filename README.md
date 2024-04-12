@@ -13,4 +13,9 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
 | [YOLOv8l](https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8l.pt) | 640                   | 52.9                 | 375.2                          | 2.39                                | 43.7               | 165.2             |
 | [YOLOv8x](https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8x.pt) | 640                   | 53.9                 | 479.1                          | 3.53                                | 68.2               | 257.8             |
 
+
+<div>
+##QR Code to try my Coca-Cola model
 ![Screenshot 2024-04-12 at 12 10 32 PM](https://github.com/17yo17/coca-cola-detection/assets/117047772/4aac66a9-f34a-4129-b577-cc23edbc63f8)
+
+</div>
