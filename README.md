@@ -12,4 +12,5 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
 | [YOLOv8m](https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8m.pt) | 640                   | 50.2                 | 234.7                          | 1.83                                | 25.9               | 78.9              |
 | [YOLOv8l](https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8l.pt) | 640                   | 52.9                 | 375.2                          | 2.39                                | 43.7               | 165.2             |
 | [YOLOv8x](https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8x.pt) | 640                   | 53.9                 | 479.1                          | 3.53                                | 68.2               | 257.8             |
-![Alt text](img/Screenshot 2024-04-12 at 12.10.32 PM.png?raw=true "Title")
+
+<![Alt text](img/Screenshot 2024-04-12 at 12.10.32 PM.png?raw=true "Title")>
