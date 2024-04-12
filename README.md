@@ -21,11 +21,12 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
   
 ## <div align="center" Training Procedure Visualization></div>
   <p>
-    <img src="img/evaluation-metrics.png" alt="Coca-Cola Model">
+    <img width="75%" src="img/evaluation-metrics.png" alt="Coca-Cola Model">
   </p>
 
 <details open>
 <summary>Performance Metrics</summary>
+  
 | Metrics  |   mAP  | Precision | Recall |
 | -------- | ------ | --------- | ------ |
 |          | 81.3%  | 90.6%     | 70.1%  |
