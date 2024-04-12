@@ -16,10 +16,12 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
 
 ## <div align="center"> Try my Coca-Cola Model</div>
 
-<div algin="center">
-  <a>
-    <img src="img/coca-cola-model.png" alt="Coca-Cola Model">
-  </a>
+<div align="center">
+  <p>  
+    <a>
+      <img src="img/coca-cola-model.png" alt="Coca-Cola Model">
+    </a>
+  </p>
 </div>
   
 ## <div align="center" Training Procedure Visualization></div>
