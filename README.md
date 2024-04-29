@@ -88,14 +88,14 @@ val: ../valid/images
         model = YOLO("YOUR_BASE_MODEL") 
         ```
   
-    **Training:**
+   **Training:**
         - Use the train function to train the model on your dataset. Adjust parameters like batch size, epochs, and device according to your hardware capabilities.
         - Example: 
         ```
         model.train(data=data_path, batch=32, epochs=25, device=2, val=False)
         ```
   
-    **Initializing the YOLOv8 model with pre-trained weights:** 
+  **Initializing the YOLOv8 model with pre-trained weights:** 
     - `best.pt`: This file represents the model's weights that achieved the best performance on a validation set during training
     - Example: 
     ```
@@ -104,14 +104,14 @@ val: ../valid/images
     This step sets up the model for training, evaluation, or deployment on specific tasks and datasets.
     `Note`: Before this we defined `data_path = "<path/to/your/data.yaml/file>"`
   
-    **Model Evaluation:**
+  **Model Evaluation:**
         - After training, evaluate the model's performance using the val function with validation data.
         - Example: 
         ```
         model.val(data=data_path)
         ```
   
-    **Model Tuning:**
+  **Model Tuning:**
     - Fine-tune the trained model using the tune function. Adjust parameters as needed.
     - Example: 
     ```
@@ -125,14 +125,14 @@ val: ../valid/images
     model.predict(data=data_path, conf=0.5, source=test_set, save=True)
     ```
     
-    **Model Deployment:**
+  **Model Deployment:**
     - Once satisfied with the model, deploy it to Roboflow using the deploy function.
     - Example:
     ```
     project.version(dataset.version).deploy(model_type="yolov8", model_path=f"PATH/TO/runs/detect/train OR tune/")
     ```
 
-    **Real-time Detection:**
+  **Real-time Detection:**
     - Utilize the model for real-time object detection using a webcam.
     - Example:
     ```
