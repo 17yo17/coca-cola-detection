@@ -175,14 +175,17 @@ val: ../valid/images
 
 ## <div align="center">Version Control and Collaboration</div>
 
-  - Team Collaboration and Role Distribution
+<details open>
+<summary>Team Collaboration and Role Distribution</summary>
 The project began with a collaborative brainstorming session where all team members contributed to the selection of the project's focus: Coca-Cola can detection using YOLOv8. Each team member played a distinct and crucial role in the project’s development:
 Gybran Valdivia sourced the dataset that formed the foundation of our model training.
 Hailey Do and Ryo Taono were the main researchers of the YOLO model. They found informative videos to help the team understand how to leverage YOLOv8 effectively.
 Ryo Taono took the lead in coding and training the model to detect Coca-Cola cans.
 Hailey Do created the README documentation to guide future users in applying YOLOv8.
 Tommy Kieu, alongside the rest of the team, participated in regular meetings to discuss project progress, strategize on model improvements, and design the final presentation.
-
-  - Version Control
+</details>details
+<details open>
+<summary>Version Control</summary>
 The code and documentation were managed through a Git repository, with Ryo Taono as the primary contributor. This approach streamlined our development process, ensuring consistency and effective tracking of changes. As mentioned before, while Ryo Taono was the main contributor to the Git repository, the whole team regularly met up to discuss the code and strategize improvements.
+</details>
 
