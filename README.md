@@ -50,11 +50,12 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
 # Coco-Cola Detection with YOLOv8
 ## Steps
 ## Requirements
-- Python 3.x
+- Python >= 3.8
 - GPU (recommended for faster training)
 - `NVIDIA GPU` with `CUDA` support (for GPU acceleration)
 - External libraries: `Ultralytics`, `Roboflow`, `PyTorch`, `CUDA` (if using GPU), etc.
 ## Installation
+- Create virtual environment with Python >= 3.8 (preferably)
 - Clone the Ultralytics repository:
 ```
 !git clone https://github.com/ultralytics/ultralytics.git
@@ -79,13 +80,21 @@ test: ../test/images
 train: ../train/images
 val: ../valid/images
 ```
-- Now, create a new python file you would use for loading up datasets and train your model with it. Name it however you want. In the file: 
+- Now, create a new python file you would use for loading up datasets and train your model with it. Name it however you want. In the file:
+
+    **Build A Model**
+        - pick your base model such as yolov8n.yaml, yolov8s.yaml, and so on...
+        ```
+        model = YOLO("YOUR_BASE_MODEL") 
+        ```
+  
     **Training:**
         - Use the train function to train the model on your dataset. Adjust parameters like batch size, epochs, and device according to your hardware capabilities.
         - Example: 
         ```
         model.train(data=data_path, batch=32, epochs=25, device=2, val=False)
         ```
+  
     **Initializing the YOLOv8 model with pre-trained weights:** 
     - `best.pt`: This file represents the model's weights that achieved the best performance on a validation set during training
     - Example: 
@@ -94,36 +103,42 @@ val: ../valid/images
     ```
     This step sets up the model for training, evaluation, or deployment on specific tasks and datasets.
     `Note`: Before this we defined `data_path = "<path/to/your/data.yaml/file>"`
+  
     **Model Evaluation:**
         - After training, evaluate the model's performance using the val function with validation data.
         - Example: 
         ```
         model.val(data=data_path)
         ```
+  
     **Model Tuning:**
     - Fine-tune the trained model using the tune function. Adjust parameters as needed.
     - Example: 
     ```
     model.tune(data=data_path, epochs=20, iterations=50, optimizer='AdamW', plots=False, save=False, val=False)
     ```
+    
+   **Testing:**
+    - Test the deployed model on a set of images using the predict function.
+    - Example:
+    ```
+    model.predict(data=data_path, conf=0.5, source=test_set, save=True)
+    ```
+    
     **Model Deployment:**
     - Once satisfied with the model, deploy it to Roboflow using the deploy function.
     - Example:
     ```
     project.version(dataset.version).deploy(model_type="yolov8", model_path=f"PATH/TO/runs/detect/train OR tune/")
     ```
-    **Testing:**
-    - Test the deployed model on a set of images using the predict function.
-    - Example:
-    ```
-    model.predict(data=data_path, conf=0.5, source=test_set, save=True)
-    ```
+
     **Real-time Detection:**
     - Utilize the model for real-time object detection using a webcam.
     - Example:
     ```
     webcam = model(source=0, save=False, show=True)
     ```
+    - setting `save` to `False` avoids from retaining all the images passed on.
     - `source=0`: This parameter specifies the video source → `0` if you want to use the default webcam connected to the PC/laptop you’re running this model on. If you have multiple cameras you can specify a different index to select a different camera.
 
 - Notes:
