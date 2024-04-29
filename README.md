@@ -25,6 +25,19 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
   </p>
 </div>
 
+## <div align="center">Confusion Matrix & F1 Confidence Curve</div>
+<div align="center">
+  <p>
+    <a>
+      <img width="75%" src="img/confusion.png" alt="Coca-Cola Model">
+    </a>
+    <a>
+      <img width="75%" src="img/f1-conf.png" alt="Coca-Cola Model">
+    </a> 
+    
+  </p>
+</div>
+
 <details open>
 <summary>Performance Metrics</summary>
   
