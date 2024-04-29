@@ -180,7 +180,7 @@ val: ../valid/images
 
 The project began with a collaborative brainstorming session where all team members contributed to the selection of the project's focus: Coca-Cola can detection using YOLOv8. Each team member played a distinct and crucial role in the project’s development:
 
-  -　Gybran Valdivia sourced the dataset that formed the foundation of our model training.
+  - Gybran Valdivia sourced the dataset that formed the foundation of our model training.
   - Hailey Do and Ryo Taono were the main researchers of the YOLO model. They found informative videos to help the team understand how to leverage YOLOv8 effectively.
   - Ryo Taono took the lead in coding and training the model to detect Coca-Cola cans.
   - Hailey Do created the README documentation to guide future users in applying YOLOv8.
