@@ -84,9 +84,9 @@ val: ../valid/images
 
 </details>
 
-        ```
-        model = YOLO("YOUR_BASE_MODEL") 
-        ```
+  ```
+  model = YOLO("YOUR_BASE_MODEL") 
+  ```
   
    **Training:**
         - Use the train function to train the model on your dataset. Adjust parameters like batch size, epochs, and device according to your hardware capabilities.
