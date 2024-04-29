@@ -60,6 +60,19 @@ Implementing Yolov8 developed by Ultrapytics to detect a can of coca-cola in an 
 %pip install ultralytics==8.0.196
 %pip install roboflow
 ```
+- import ultralytics and Roboflow libraries
+```
+import ultralytics
+from ultralytics import YOLO
+from roboflow import Roboflow
+```
+- If you want to deploy your model to Roboflow, code&paste following code provided by Roboflow
+```
+rf = Roboflow(api_key="your-API-key")
+project = rf.workspace("roboflow-xuntf").project("coca-cola-detection")
+version = project.version(1)
+dataset = version.download("yolov8")
+```
 
 ## Usage
 ### Data Preparation:
@@ -103,52 +116,53 @@ val: ../valid/images
   ```
   model.train(data=data_path, batch=32, epochs=25, device=2, val=False)
   ```
-  
-  **Initializing the YOLOv8 model with pre-trained weights:** 
-    - `best.pt`: This file represents the model's weights that achieved the best performance on a validation set during training
-    - Example: 
-    ```
-    model = YOLO("PATH/TO/train/weights/best.pt")
-    ```
-    This step sets up the model for training, evaluation, or deployment on specific tasks and datasets.
-    `Note`: Before this we defined `data_path = "<path/to/your/data.yaml/file>"`
-  
-  **Model Evaluation:**
-        - After training, evaluate the model's performance using the val function with validation data.
-        - Example: 
-        ```
-        model.val(data=data_path)
-        ```
-  
-  **Model Tuning:**
-    - Fine-tune the trained model using the tune function. Adjust parameters as needed.
-    - Example: 
-    ```
-    model.tune(data=data_path, epochs=20, iterations=50, optimizer='AdamW', plots=False, save=False, val=False)
-    ```
-    
-   **Testing:**
-    - Test the deployed model on a set of images using the predict function.
-    - Example:
-    ```
-    model.predict(data=data_path, conf=0.5, source=test_set, save=True)
-    ```
-    
-  **Model Deployment:**
-    - Once satisfied with the model, deploy it to Roboflow using the deploy function.
-    - Example:
-    ```
-    project.version(dataset.version).deploy(model_type="yolov8", model_path=f"PATH/TO/runs/detect/train OR tune/")
-    ```
 
-  **Real-time Detection:**
-    - Utilize the model for real-time object detection using a webcam.
-    - Example:
-    ```
-    webcam = model(source=0, save=False, show=True)
-    ```
-    - setting `save` to `False` avoids from retaining all the images passed on.
-    - `source=0`: This parameter specifies the video source → `0` if you want to use the default webcam connected to the PC/laptop you’re running this model on. If you have multiple cameras you can specify a different index to select a different camera.
+**Initializing the YOLOv8 model with pre-trained weights:** 
+  - `best.pt`: This file represents the model's weights that achieved the best performance on a validation set during training
+  - Example:
+    
+  ```
+  model = YOLO("PATH/TO/train/weights/best.pt")
+  ```
+  This step sets up the model for training, evaluation, or deployment on specific tasks and datasets.
+  `Note`: Before this we defined `data_path = "<path/to/your/data.yaml/file>"`
+  
+**Model Evaluation:**
+  - After training, evaluate the model's performance using the val function with validation data.
+  - Example: 
+  ```
+  model.val(data=data_path)
+  ```
+  
+**Model Tuning:**
+  - Fine-tune the trained model using the tune function. Adjust parameters as needed.
+  - Example: 
+  ```
+  model.tune(data=data_path, epochs=20, iterations=50, optimizer='AdamW', plots=False, save=False, val=False)
+  ```
+    
+**Testing:**
+  - Test the deployed model on a set of images using the predict function.
+  - Example:
+  ```
+  model.predict(data=data_path, conf=0.5, source=test_set, save=True)
+  ```
+    
+**Model Deployment:**
+  - Once satisfied with the model, deploy it to Roboflow using the deploy function.
+  - Example:
+  ```
+  project.version(dataset.version).deploy(model_type="yolov8", model_path=f"PATH/TO/runs/detect/train OR tune/")
+  ```
+
+**Real-time Detection:**
+  - Utilize the model for real-time object detection using a webcam.
+  - Example:
+  ```
+  webcam = model(source=0, save=False, show=True)
+  ```
+  - setting `save` to `False` avoids from retaining all the images passed on.
+  - `source=0`: This parameter specifies the video source → `0` if you want to use the default webcam connected to the PC/laptop you’re running this model on. If you have multiple cameras you can specify a different index to select a different camera.
 
 - Notes:
     - Ensure that the paths to data, trained, and tuned models are correctly specified.
