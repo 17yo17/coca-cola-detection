@@ -96,12 +96,13 @@ val: ../valid/images
   model = YOLO("YOUR_BASE_MODEL") 
   ```
   
-   **Training:**
-        - Use the train function to train the model on your dataset. Adjust parameters like batch size, epochs, and device according to your hardware capabilities.
-        - Example: 
-        ```
-        model.train(data=data_path, batch=32, epochs=25, device=2, val=False)
-        ```
+**Training:**
+  - Use the train function to train the model on your dataset. Adjust parameters like batch size, epochs, and device according to your hardware capabilities.
+  - Example: 
+    
+  ```
+  model.train(data=data_path, batch=32, epochs=25, device=2, val=False)
+  ```
   
   **Initializing the YOLOv8 model with pre-trained weights:** 
     - `best.pt`: This file represents the model's weights that achieved the best performance on a validation set during training
